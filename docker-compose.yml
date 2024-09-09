@@ -1,4 +1,4 @@
-version: "3.4"
+
 
 services:
 
@@ -25,7 +25,7 @@ services:
   # Core services
   bookstore-consul-discovery:
     hostname: bookstore-consul-discovery
-    image: consul
+    image: hashicorp/consul
     container_name: bookstore-consul-discovery
     restart: always
     ports:
@@ -196,7 +196,7 @@ services:
       - bookstore-app-network
 
   bookstore-influxdb:
-    image: influxdb
+    image: influxdb:1.2
     container_name: bookstore-influxdb
     hostname: bookstore-influxdb
     volumes:
